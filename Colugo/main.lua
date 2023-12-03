@@ -1,10 +1,11 @@
 require "gui"
 
 -- Constants
-local TOOL_NAME = "Colugo"
-local TOOL_VERSION = "1.0"
-local TOOL_AUTHOR = "Jugwine"
-local TOOL_DESCRIPTION = "A creative sample graber"
+-- Global Constants
+TOOL_NAME = "Colugo"
+TOOL_VERSION = "1.0.1"
+TOOL_AUTHOR = "Jugwine"
+TOOL_DESCRIPTION = "A creative sample graber"
 
 -- Main function
 function main()
@@ -44,5 +45,4 @@ end
 if not renoise.tool().app_new_document_observable:has_notifier(onNewDocument) then
    renoise.tool().app_new_document_observable:add_notifier(onNewDocument)
 end
-
 

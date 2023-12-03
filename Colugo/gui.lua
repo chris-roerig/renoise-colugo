@@ -134,9 +134,9 @@ function show_dialog()
           vb:valuebox {
               id = "num_videos",
               min = 1,
-              max = 32,
+              max = 100,
               value = 10,
-              width = 50,
+              width = 55,
               notifier = function()
                 save_preferences("num_videos", vb.views.num_videos.value)
               end
@@ -201,6 +201,5 @@ function show_dialog()
 
 
   -- Show the dialog
-  renoise.app():show_custom_dialog("Colugo", content)
+  renoise.app():show_custom_dialog(TOOL_NAME.." "..TOOL_VERSION.." by Jugwine", content)
 end
-

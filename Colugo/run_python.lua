@@ -1,12 +1,24 @@
 local python_proc = nil
 local is_notifier_added = false
 
+-- Function to execute a system command with arguments
+function execute_command(command, ...)
+    local args = {...}
+    local commandString = command
+
+    -- Append arguments to the command string
+    for _, arg in ipairs(args) do
+        commandString = commandString .. " \"" .. tostring(arg) .. "\""
+    end
+
+    -- Execute the command and return the process handle
+    return io.popen(commandString, "r")
+end
 
 -- Function to start the Python script
 function start_python_script(output_path, numitems, sample_length)
-    local command = "python3 yt-downloader.py " .. output_path .. " --num_videos " .. numitems .. " --sample_length " .. sample_length
-    
-    python_proc = io.popen(command, "r")
+    -- Build and execute the command
+    python_proc = execute_command("python3 yt-downloader.py", output_path, "--num_videos", numitems, "--sample_length", sample_length)
 
     -- Check for Python script output periodically
     if not is_notifier_added then
@@ -14,7 +26,6 @@ function start_python_script(output_path, numitems, sample_length)
         is_notifier_added = true
     end
 end
-
 
 -- Function to check for output from the Python script
 function check_python_output()

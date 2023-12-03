@@ -1,4 +1,6 @@
 bin
 words.txt
 *.xml
+Colugo/builds
 !/src/manifest.xml
+
