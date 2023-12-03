@@ -57,5 +57,16 @@ Here's how to use Colugo:
 - Colugo adheres to YouTube's API usage limits and terms of service.
 
 ## Support
+
+### Troubleshooting
+
+If Colugo displays "Words saved and Output path set", but doesn't do anything else, it's most likley because the python script is not running properly. Try running it alone like this:
+
+```
+python3 yt-downloader.py /your/output/path --num_videos 1 --sample_length 500
+```
+If the script works than the tool should work as well.
+
+
 For queries or issues, raise an issue on the Colugo repository page.
 
