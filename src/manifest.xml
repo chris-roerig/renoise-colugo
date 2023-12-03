@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RenoiseScriptingTool doc_version="0">
+  <ApiVersion>6</ApiVersion>
+  <Id>com.jugwine.colugo</Id>
+  <Name>Colugo</Name>
+  <Version>1.0</Version>
+  <Author>Jugwine</Author>
+  <Description>Pulls audio from random youtube videos.</Description>
+  <MainFileName>main.lua</MainFileName>
+</RenoiseScriptingTool>
+
