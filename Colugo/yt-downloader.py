@@ -51,7 +51,7 @@ class download_range_func:
 
 
 def make_random_search_phrase(word_list):
-    words = random.sample(word_list, 2)
+    words = random.sample(word_list, min(2, len(word_list)))
     phrase = ' '.join(words)
     print('Search phrase: "{}"'.format(phrase))
     return phrase
